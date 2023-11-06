@@ -1,0 +1,194 @@
+
+.AuthorTaps{
+    width: 100%;
+    margin: 8rem 0 3rem 0 ;
+
+}
+
+
+.AuthorTaps_box{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.AuthorTaps_box_left_btn{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.AuthorTaps_box_left_btn button {
+    border: 1px solid var(--icons-color);
+    outline: 0 ;
+    background-color: var(--main-bg-color);
+    font-size: 1.1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all .3s ease-in;
+    color: var(--icons-color);
+    padding: 0.4rem 0.7rem;
+    font-weight: 600;
+}
+
+.AuthorTaps_box_left_btn button:hover{
+    background-color: var(--icons-color);
+    color: var(--main-bg-color);
+    box-shadow: var(--box-shadow);
+}
+
+
+.AuthorTaps_box_left_btn .active{
+    border: 1px solid var(--icons-color);
+    background-color: var(--icons-color);
+    color: var(--main-bg-color);
+}
+
+
+.AuthorTaps_box_right{
+    position: relative;
+
+}
+
+.AuthorTaps_box_right_para{
+    border: 1px solid var(--icons-color);
+    border-radius: 2rem;
+    width: 15rem;
+    padding: 0 2rem;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    grid-template-columns: 9fr 1fr;
+    display: flex;
+    font-weight: 600;
+
+}
+
+
+.AuthorTaps_box_right_para p span {
+    font-size: 1.2rem;
+}
+
+.icon{
+    display: flex;
+}
+
+
+.AuthorTaps_box_right_list{
+    background-color: var(--main-bg-color);
+    padding: 1.2rem;
+    width: 15rem;
+    left: -3rem;
+    position: absolute;
+    z-index: 111111;
+    border-radius: 1rem;
+    text-align: center;
+    margin: 1.5rem;
+    box-shadow: var(--box-shadow);
+}
+
+
+.AuthorTaps_box_right_list_items{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.2rem 0 0.2rem 0;
+}
+
+.AuthorTaps_box_right_list_items p {
+    transition: all .3s ease-in;
+    padding: 0 1rem;
+    cursor: pointer;
+}
+
+.AuthorTaps_box_right_list_items span{
+    color: var(--icons-color);
+}
+
+.AuthorTaps_box_right_list_items span:hover{
+    color: var(--main-bg-color);
+}
+
+.AuthorTaps_box_right_list_items:hover{
+    background-color: var(--icons-color);
+    color: var(--main-bg-color);
+    border-radius: 0.4rem;
+}
+
+
+
+@media screen and (max-width: 35em){
+
+    
+.AuthorTaps{
+    margin: 3rem 0 3rem 0 ;
+}
+
+
+.AuthorTaps_box{
+   width: 90%;
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 1rem;
+}
+
+
+.AuthorTaps_box_left_btn{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
+}
+
+.AuthorTaps_box_left_btn button {
+    font-size: 0.7rem;
+    padding: 0.2rem 0rem;
+}
+
+.AuthorTaps_box_right{
+    margin: 2rem 0 0 0 ;
+}
+
+.AuthorTaps_box_right_para{
+    width: 90%;
+    padding: 0 1rem;
+    justify-content: space-between;
+}
+
+
+.AuthorTaps_box_right_para p span {
+    font-size: 1rem;
+}
+
+.icon{
+    display: flex;
+}
+
+
+.AuthorTaps_box_right_list{
+    padding: 0.8rem;
+    width: 50%;
+    left: 3rem;
+    margin: 1rem;
+    box-shadow: var(--box-shadow);
+}
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width:1024px){
+    .AuthorTaps_box{
+       width: 90%;
+       display: grid;
+       grid-template-columns: 1fr;
+       gap: 2rem;
+    }
+    
+    .AuthorTaps_box_right_list{
+        padding: 0.8rem;
+        width: 50%;
+        left: 3rem;
+        margin: 1rem;
+        box-shadow: var(--box-shadow);
+    }
+    }

@@ -7,7 +7,7 @@ import AuthorTaps from '@/authorPage/AuthorTaps/AuthorTaps';
 import NFTCardTwo from '@/collectionPage/NFTCardTwo/NFTCardTwo';
 import Title from '@/components/Title/Title';
 import Navbar from '@/components/Navbar/Navbar';
-// import Brand
+import FollowerTabcard from '@/components/FollowerTab/FollowerTabcard/FollowerTabcard';
 import images from "../../img";
 
 const Author = () => {
@@ -38,9 +38,15 @@ const Author = () => {
   return (
 
     <>
+    <div className={Style.Author} >
     <Navbar/>
     <AuthorProfileCard/>
-    <div className={Style.Author} >Hello</div>
+    <AuthorTaps collectibles={setcollectibles} created={setcreated} like={setlike} follower={setfollower} following={setfollowing} />
+    <Title heading="Popular Creators" paragraph="Click on Music Icon and Enjoy NFTs Music or Audio" />
+    {/* {popularArray.map((el , i) => (
+      <FollowerTabcard key={i+6} index={i} el={el} />
+    ))} */}
+    </div>
     
     </>
   
