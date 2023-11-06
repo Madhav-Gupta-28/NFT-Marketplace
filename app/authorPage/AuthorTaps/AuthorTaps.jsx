@@ -10,7 +10,7 @@ import Style from "./authortaps.module.css"
 const AuthorTaps = ({collectibles , created , like , follower , following}) => {
 
   const [openList , setopenList] = useState(false);
-  const [activeBtn , setactivebtn] = useState(0);
+  const [activeBtn , setactivebtn] = useState(1);
   const [selectedMenu , setselectedMenu] = useState("Most Recent");
 
   const listArray = [
@@ -31,61 +31,49 @@ const AuthorTaps = ({collectibles , created , like , follower , following}) => {
 
   const openTab = (e) => {
     const btnText = e.target.innerText;
-    
-    switch ( btnText) {
-      
-      case "Collectibles":
-        collectibles(true);
-        created(false);
-        like(false);
-        follower(false);
-        following(false);
-        setactivebtn(1)
-      
-      case "Created":
-        collectibles(false);
-        created(true);
-        like(false);
-        follower(false);
-        following(false);
-        setactivebtn(2)
+    console.log('Inner text',btnText);
 
-      case "Following":
-        collectibles(false);
-        created(false);
-        like(false);
-        follower(false);
-        following(true);
-        setactivebtn(3)
-
-    
-      case "Follower":
-        collectibles(false);
-        created(false);
-        like(false);
-        follower(true);
-        following(false);
-        setactivebtn(4)
-      
-      
-      case "Like":
-        collectibles(false);
+    if(btnText == "Collectibles"){
+      collectibles(true);
+      created(false);
+      like(false);
+      follower(false);
+      following(false);
+      setactivebtn(1)
+    }else if(btnText == "Created"){
+      collectibles(false);
+      created(true);
+      like(false);
+      follower(false);
+      following(false);
+      setactivebtn(2)
+    }
+    else if(btnText == "Following"){
+      collectibles(false);
+      created(false);
+      like(false);
+      follower(false);
+      following(true);
+      setactivebtn(3)
+    }
+    else if(btnText == "Follower"){
+      collectibles(false);
+      created(false);
+      like(false);
+      follower(true);
+      following(false);
+      setactivebtn(4)
+    }else if(btnText == "Like"){
+      collectibles(false);
         created(false);
         like(true);
         follower(false);
         following(false);
-        setactivebtn(5)
-
-      default:
-        collectibles(false);
-        created(false);
-        like(false);
-        follower(false);
-        following(false);
-        setactivebtn(0)
-
+        setactivebtn(5);
     }
   }
+
+
 
 
 

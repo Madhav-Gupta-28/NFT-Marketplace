@@ -11,7 +11,6 @@ import { MdVerified , MdTimer } from 'react-icons/md';
 import Style from "./nftcardtwo.module.css";
 
 
-
 const NFTCardTwo = ({NFTData}) => {
 
     const [like, setlike] = useState(false);
