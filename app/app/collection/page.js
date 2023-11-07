@@ -15,7 +15,6 @@ import NFTCardTwo from '@/collectionPage/NFTCardTwo/NFTCardTwo';
 import Title from '@/components/Title/Title';
 
 
-
 const CollectionPage = () => {
 
   const collectionArray = [

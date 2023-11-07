@@ -10,17 +10,16 @@ import Navbar from '@/components/Navbar/Navbar';
 import FollowerTabcard from '@/components/FollowerTab/FollowerTabcard/FollowerTabcard';
 import images from "../../img";
 import AuthorNFTCardBox from '@/authorPage/AuthorNFTCardBox/AuthorNFTCardBox';
+import Footer from '@/components/Footer/Footer';
 
 const Author = () => {
 
-    // useStates
+    //  use state 
     const [collectibles, setcollectibles] = useState(true);
     const [like, setlike] =  useState(false);
     const [created, setcreated] = useState(false);
     const [follower, setfollower] = useState(false);
     const [following , setfollowing] = useState(false);
-
-
 
     const popularArray = [
         images.user1,
@@ -34,6 +33,27 @@ const Author = () => {
         images.user1,
         images.user2
     ]
+    const followingArray = [
+      {
+        background:images.creatorbackground1,
+        user : images.user1
+      },
+      {
+        background:images.creatorbackground2,
+        user : images.user2
+      },
+      {
+        background:images.creatorbackground3,
+        user : images.user3
+      },      {
+        background:images.creatorbackground4,
+        user : images.user4
+      },
+      {
+        background:images.creatorbackground2,
+        user : images.user5
+      }
+    ]
 
   return (
 
@@ -42,8 +62,20 @@ const Author = () => {
     <Navbar/>
     <AuthorProfileCard/>
     <AuthorTaps collectibles={setcollectibles} created={setcreated} like={setlike} follower={setfollower} following={setfollowing} />
-    <Title heading="Popular Creators" paragraph="Click on Music Icon and Enjoy NFTs Music or Audio" />
+    <Title heading="Popular NFTs" paragraph="Click on Music Icon and Enjoy NFTs Music or Audio" />
     <AuthorNFTCardBox collectibles={collectibles} created={created} like={like} follower={follower} following={following} />
+
+    <Title heading="Popular Creators" paragraph="Click on Music Icon and Enjoy NFTs Music or Audio" />
+   
+            <div  className={Style.follower_box}  >
+                {followingArray.map((el,i) => (
+                    <FollowerTabcard index={i} el={el} />
+
+                ))}
+            </div>
+       
+          
+    <Footer/>
     </div>
     
     </>
