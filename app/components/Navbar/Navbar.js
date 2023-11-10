@@ -1,6 +1,7 @@
 "use client"
 
-import React , {useState , useEffect, useSyncExternalStore} from 'react'
+import React , {useState , useEffect, useSyncExternalStore} from 'react';
+import { useRouter } from 'next/navigation';
 
 import Image from 'next/image'
 
@@ -26,6 +27,7 @@ import Button from '../Button/Button'
 
 const Navbar = () => {
 
+    const router = useRouter();
     // USESTATES
     const [discover , setdiscover] = useState(false);
     const [help , sethelp] = useState(false);
@@ -95,6 +97,10 @@ const Navbar = () => {
 
     }
 
+    const handleCreateBtnClicked = () => {
+        router.push("/createNFT");
+    }
+
 
   return (
     <div className={Style.navbar}>
@@ -162,7 +168,7 @@ const Navbar = () => {
 
             {/* CREATE BUTTON SECTIONS */}
             <div  className={Style.NAVBAR_CONTAINER_RIGHT_BUTTON} > 
-            <Button btnName="Create"  handleClick={() => console.log('creeate btn clicked')} />
+            <Button btnName="Create"  handleClick={() => handleCreateBtnClicked() } />
                    
             </div>
             

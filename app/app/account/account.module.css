@@ -1,0 +1,50 @@
+.Account{
+    width: 100%;
+    margin-block: 4rem;
+}
+
+.Account_info{
+    width: 60%;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--shadow-dark-color);
+}
+
+.Account_info h1 {
+    color: var(--icons-colors);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0 ;
+
+}
+
+.Account_info p {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0 0 2rem 0 ;
+}
+
+.Account_box{
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 60%;
+    gap: 4rem;
+    margin-top: 3rem  ;
+}
+
+.Account_box_img_img{
+    border-radius: 50%;
+    cursor: pointer;
+} 
+
+.Account_box_img_p{
+    position: relative;
+    z-index: 11111;
+    top: -3.5rem;
+    left: 1.5rem;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    
+}
+
