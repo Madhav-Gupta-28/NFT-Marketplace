@@ -8,10 +8,74 @@ import FollowerTabcard from './FollowerTabcard/FollowerTabcard'
 import images from "../../img"
 
 const FollowerTab = () => {
-    const CardArray = [images.user1 , images.user2 , images.user3 , images.user4 ]
-    const newsArray = [images.user1 , images.user2 , images.user3 , images.user4 , images.user5, images.user6,images.user7,images.user8]
-    const followingArray = [images.user1 , images.user2 , images.user3 , images.user4 , images.user5,images.user6]
-  
+  const followingArray = [
+    {
+      background:images.creatorbackground1,
+      user : images.user1
+    },
+    {
+      background:images.creatorbackground2,
+      user : images.user2
+    },
+    {
+      background:images.creatorbackground3,
+      user : images.user3
+    },      {
+      background:images.creatorbackground4,
+      user : images.user4
+    },
+    {
+      background:images.creatorbackground2,
+      user : images.user5
+    }
+  ]
+
+  const newsArray = [
+    {
+      background:images.creatorbackground1,
+      user : images.user1
+    },
+    {
+      background:images.creatorbackground2,
+      user : images.user2
+    },
+    {
+      background:images.creatorbackground3,
+      user : images.user3
+    },      {
+      background:images.creatorbackground4,
+      user : images.user4
+    },
+    {
+      background:images.creatorbackground2,
+      user : images.user5
+    }
+  ]
+
+  const followerArray = [
+    {
+      background:images.creatorbackground1,
+      user : images.user1
+    },
+    {
+      background:images.creatorbackground2,
+      user : images.user2
+    },
+    {
+      background:images.creatorbackground3,
+      user : images.user3
+    },      {
+      background:images.creatorbackground4,
+      user : images.user4
+    },
+    {
+      background:images.creatorbackground2,
+      user : images.user5
+    }
+  ]
+
+
+
     const [popular , setpopular] = useState(false);
     const [news , setnews] = useState(false);
     const [follower , setfollower] = useState(false);
@@ -76,7 +140,7 @@ const FollowerTab = () => {
         {
           popular && (
             <div className={Style.collection_box}>
-              {CardArray.map((el , i) => (
+              {followerArray.map((el , i) => (
                 <FollowerTabcard index={i+1}  el={el} />
               ))}
   
