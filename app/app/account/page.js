@@ -6,6 +6,7 @@ import Image from 'next/image'
 import images from "../../img";
 import Form from '@/accountPage/Form/Form';
 import Navbar from '@/components/Navbar/Navbar'
+import Footer from '@/components/Footer/Footer'
 
 const Account = () => {
     const [fileurl , setfileurl] = useState(null);
@@ -42,6 +43,8 @@ const Account = () => {
         </div>
 
     </div>
+
+    <Footer/>
 
 
     </>
