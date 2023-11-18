@@ -12,12 +12,27 @@ import { TbDownloadOff , TbDownload} from 'react-icons/tb';
 //  INTERNAL IMAGES IMPORT 
 import images from "../../../img";
 
+import { ConnectWallet } from "@thirdweb-dev/react";
+import {
+  ThirdwebProvider,
+  metamaskWallet
+} from "@thirdweb-dev/react";
+
 
 
 import Style from "./profile.module.css"
 
 const Profile = () => {
   return (
+
+    <ThirdwebProvider 
+    supportedWallets={[
+      metamaskWallet()
+    ]}  
+     >
+
+
+  
 
     <div className={Style.PROFILE}>
 
@@ -74,13 +89,15 @@ const Profile = () => {
           <div className={Style.PROFILE_MENU_ONE_ITEM}>
             <TbDownload/>
             <p>
-              <Link href={{pathname:'/disconnect'}}>Disconnect</Link>
+            <ConnectWallet />
             </p>
           </div>
         </div>
 
       </div>
     </div>
+
+    </ThirdwebProvider>
 
   
   )

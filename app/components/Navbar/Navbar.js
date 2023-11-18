@@ -23,7 +23,6 @@ import Sidebar from './Sidebar/Sidebar'
 // Style File Import
 import Style from "./Navbar.module.css"
 import Button from '../Button/Button'
-// import { ConnectButton } from '@rainbow-me/rainbowkit'
 
 const Navbar = () => {
 

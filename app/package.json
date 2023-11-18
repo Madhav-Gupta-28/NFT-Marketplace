@@ -13,12 +13,16 @@
     "@chakra-ui/react": "^2.8.1",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@rainbow-me/rainbowkit": "^1.2.0",
+    "@thirdweb-dev/react": "^4.1.7",
     "framer-motion": "^10.16.4",
     "next": "13.5.6",
     "react": "^18",
     "react-dom": "^18",
     "react-dropzone": "^14.2.3",
-    "react-icons": "^4.11.0"
+    "react-icons": "^4.11.0",
+    "viem": "^1.19.3",
+    "wagmi": "^1.4.7"
   },
   "devDependencies": {
     "autoprefixer": "^10",
